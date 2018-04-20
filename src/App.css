@@ -1,7 +1,14 @@
-.app {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c9c9c9;
+}
+
+.App {
   margin: 0;
   padding: 0;
 }
+
 .header {
   fill: white;
   color: white;
@@ -22,6 +29,7 @@
 }
 
 .content h1 {
-  color: gray;
-  font-family: 'Gugi', cursive;
+  color: rgb(112, 112, 112);
+
+  font-family: 'Rubik', sans-serif;
 }

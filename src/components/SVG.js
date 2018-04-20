@@ -1,13 +1,11 @@
 import React, { PureComponent } from 'react'
-import { easeQuadOut } from 'd3-ease'
+import { easePolyInOut } from 'd3-ease'
 import Animate from 'react-move/Animate'
 import { interpolate } from 'flubber'
 import Surface from './Surface' // this is just a responsive SVG
 // import statesJSON from './states.json';
-import logo from '../svg/logo.svg'
-import logoe from '../svg/e.svg'
-import logos from '../svg/s.svg'
-console.log(logoe)
+// import logo from '../svg/logo.svg'
+
 // **************************************************
 //  SVG Layout
 // **************************************************
@@ -54,7 +52,7 @@ class Example extends PureComponent {
             ]}
             update={{
               d: interpolator,
-              timing: { duration: 1000, ease: easeQuadOut }
+              timing: { duration: 1000, ease: easePolyInOut }
             }}
           >
             {state => {

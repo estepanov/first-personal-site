@@ -2,6 +2,7 @@
   "name": "estepanov.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://estepanov.io",
   "dependencies": {
     "d3-ease": "^1.0.3",
     "flubber": "^0.4.2",
