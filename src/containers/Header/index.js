@@ -1,19 +1,34 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../../svg/logo.svg'
-import name from '../../svg/name.svg'
+import { Link, NavLink } from 'react-router-dom'
+import Name from './name'
+
+import Logo from '../../svg/logo'
 import './Header.css'
 
 export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Link to="#home" className="logoLink">
-          <img src={logo} style={{ height: 80 }} alt="logo" />
+        <Link to="/" className="logoLink">
+          <Logo style={{ fill: '#515151' }} height="80" alt="logo" />
         </Link>
         <h1>
-          <img style={{ width: 300 }} src={name} alt="evans stepanov" />
+          <Link to="/" className="logoLink">
+            <Name />
+          </Link>
         </h1>
+        <div className="nav-bar">
+          <NavLink activeClassName="active-nav" to="/" exact>
+            About
+          </NavLink>
+          {/*<NavLink to="/blog">Blog</NavLink>*/}
+          <NavLink activeClassName="active-nav" to="/work">
+            Work
+          </NavLink>
+          <NavLink activeClassName="active-nav" to="/contact">
+            Contact
+          </NavLink>
+        </div>
       </div>
     )
   }

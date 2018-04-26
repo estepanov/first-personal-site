@@ -1,0 +1,10 @@
+@media only screen and (max-device-width: 568px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+
+  .nav-bar a,
+  .nav-bar .active-nav {
+    margin: 5px 0 5px 0;
+  }
+}
