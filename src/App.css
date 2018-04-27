@@ -50,10 +50,11 @@ body {
 .content h3,
 .content h4,
 .content h5 {
-  color: rgb(112, 112, 112);
+  color: #707070;
   font-family: 'Rubik', sans-serif;
   padding: 0;
   margin: 20px 0 0 0;
+  font-weight: normal;
 }
 
 .center {

@@ -1,0 +1,83 @@
+.hidden {
+  opacity: 0;
+}
+
+.page-curtain {
+  /* opacity: 1; */
+  left: 0;
+  top: 0;
+  background-color: black;
+  animation: fadeIn ease-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  position: fixed;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut ease-in 1s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in.one {
+  opacity: 0;
+  animation: fadeIn ease-in 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.image-zoom {
+  cursor: zoom-out;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-zoom h1 {
+  padding: 1em;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.logo-overlay {
+  opacity: 0.2;
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  height: 100px;
+  width: 100px;
+  z-index: 101;
+}

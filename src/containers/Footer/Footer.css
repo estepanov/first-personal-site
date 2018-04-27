@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex: 0 0 auto;
-  padding: 2em;
+  padding: 4em;
   font-size: 0.8em;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f7f7f7;
@@ -26,16 +26,16 @@
   margin: 0 0.5em 0 0.5em;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
+  transition: color 1s ease-out;
 }
 
-.footer-links a:hover,
-.footer-links .active-nav {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 1.2em;
+.footer-links a:hover {
+  transition: color 0.4s ease-in;
   color: #c300ff;
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+}
+
+.footer-links .active-nav {
+  color: #c300ff;
 }
 
 .footer p {

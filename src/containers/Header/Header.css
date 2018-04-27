@@ -24,10 +24,12 @@
   margin: 0 1em 0 1em;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
+  transition: color 0.4s ease-out;
 }
 
 .nav-bar a:hover {
   color: #008bc7;
+  transition: color 0.3s ease-in;
 }
 .nav-bar .active-nav {
   letter-spacing: 1px;

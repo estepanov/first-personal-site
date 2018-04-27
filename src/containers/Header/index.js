@@ -22,8 +22,8 @@ export default class Header extends Component {
             About
           </NavLink>
           {/*<NavLink to="/blog">Blog</NavLink>*/}
-          <NavLink activeClassName="active-nav" to="/work">
-            Work
+          <NavLink activeClassName="active-nav" to="/projects">
+            Projects
           </NavLink>
           <NavLink activeClassName="active-nav" to="/contact">
             Contact

@@ -1,0 +1,8 @@
+.projects {
+  width: 100%;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+}

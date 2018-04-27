@@ -1,0 +1,29 @@
+.project-list a,
+.project-list a:visited {
+  margin: 1em;
+  padding: 1em;
+  color: #969696;
+  text-decoration: none;
+  background-color: #eeeeee;
+  /* border: solid 1px gray; */
+  opacity: 0.6;
+  transition: opacity 1s ease-in-out, color 1s ease-in-out;
+}
+
+.project-list a:hover {
+  color: #707070;
+  opacity: 1;
+  transition: opacity 1s ease-in-out, color 1s ease-in-out;
+}
+
+.project-list a:hover > h3 {
+  color: #c300ff !important;
+}
+
+.list-item h3 {
+  margin: 0px !important;
+}
+
+.list-item p {
+  margin: 5px 0 0 0 !important;
+}
