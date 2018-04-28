@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 20px 0 0 0;
 }
 
 .project-bg-img {
@@ -20,7 +21,7 @@
   height: 200px;
   width: 200px;
   border-radius: 0px;
-  border: solid 1px #444444;
+  /* border: solid 3px #dddddd; */
   margin: 1em;
   transition: opacity 1s ease-in-out;
   background-size: cover !important;
@@ -37,9 +38,13 @@
   margin: 0px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  /* border-bottom: solid 1px black; */
+  color: #c300ff;
+  padding: 0 0 5px 0;
+  border-bottom: solid 2px rgba(195, 0, 255, 1);
+  /* border-top: solid 2px rgba(195, 0, 255, 1); */
+  /* border-top: solid 3px rgba(195, 0, 255, 0.2); */
 }
 
 .project-item-header p {
@@ -51,7 +56,7 @@
   flex-direction: column;
 }
 
-.project-item-link {
+.project-item-link-large {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -60,7 +65,7 @@
   margin: 2em 0 2em 0;
 }
 
-.project-item-link a {
+.project-item-link-large a {
   padding: 3px;
   margin: 0 15px 0 15px;
   transition: color 1s ease-out;
@@ -70,10 +75,41 @@
   /* border-bottom: solid 1px darkgray; */
 }
 
-.project-item-link a:hover {
+.project-item-link-large a:hover {
   transition: color 0.4s ease-in;
   color: #c300ff;
   /* border-bottom: solid 1px #c300ff; */
+}
+
+.project-item-link {
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  /* justify-content: center;
+  align-items: center;*/
+  margin: 1em 0 1em 0;
+}
+
+.project-item-link a {
+  /* padding: 3px; */
+  /* margin: 0 15px 0 15px; */
+  transition: color 0.4s ease-in, border 0.4s ease-in;
+  color: darkgray;
+  /* font-size: 1.3em; */
+  text-decoration: none;
+  padding: 0 3px 1px 3px;
+  margin: 0 10px 0 0;
+  border-bottom: solid 1px darkgray;
+  /* border-bottom: solid 1px darkgray; */
+}
+
+.project-item-link a:hover {
+  transition: color 0.4s ease-in, border 0.4s ease-in;
+  color: #c300ff;
+
+  border-bottom: solid 1px #c300ff;
 }
 
 .project-tags {

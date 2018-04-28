@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 568px) {
+@media only screen and (max-device-width: 600px) {
   .nav-bar {
     flex-direction: column;
   }
@@ -6,5 +6,18 @@
   .nav-bar a,
   .nav-bar .active-nav {
     margin: 5px 0 5px 0;
+  }
+
+  .project-list a,
+  .project-list a:visited {
+    opacity: 1 !important;
+  }
+
+  .list-item-img-container {
+    justify-content: center;
+  }
+
+  .list-item-mini-img {
+    opacity: 0.9 !important;
   }
 }

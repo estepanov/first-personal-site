@@ -1,10 +1,11 @@
 import React from 'react'
+import './ImageBackground.css'
 
 const ImageBackground = ({ onClick, url, className }) => {
   return (
     <div
       onClick={onClick}
-      className={className}
+      className={`${className} img-scale-hover`}
       style={{
         background: `url(${url})`
       }}
