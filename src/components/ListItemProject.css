@@ -52,12 +52,12 @@
 .list-item-mini-img {
   filter: grayscale(100%);
   border: solid 3px #ffffff;
-  /* border-radius: 1px; */
+  /* border-radius: 50%; */
   opacity: 0.5;
   margin: 10px 10px 0 0;
   transition: opacity 1s ease-in;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   background-color: rgba(206, 206, 206, 0.1);
   background-size: cover !important;
   background-repeat: no-repeat !important;

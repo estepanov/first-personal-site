@@ -121,6 +121,10 @@ const data = [
     ],
     links: [
       {
+        title: 'Presentation Video',
+        href: 'https://www.youtube.com/watch?v=aDu8JJXnEIY'
+      },
+      {
         title: 'Website',
         href: 'https://boilerplate.pro'
       },
@@ -134,7 +138,7 @@ const data = [
     urlname: 'scrapeTorrentStats',
     name: 'scrapeTorrentStats',
     description:
-      'A platform that actively scrapes and aggregates information on popular files from various bit torrent websites. The download statistics on files are tracked over time.',
+      'Scrape information from the bittorrent trackers and the distributed hash table. Given a bittorrent magnet URI, scrapeTorrentStats can check both tracker and the DHT for downloads and peers. This project utilizes two great tools from the wizards that brought us WebTorrent. We use their DHT client bittorrent-dht, and their tracker client bittorrent-tracker. This project also uses native promises.',
     images: [
       {
         title: 'Yarn Run Example',
@@ -147,28 +151,24 @@ const data = [
     ],
     breakdown: [
       {
-        title: 'Frontend',
-        value: ['React', 'React-Router', 'Webpack']
-      },
-      {
         title: 'Backend',
-        value: ['Node', 'Express', 'Mocha', 'Postgres', 'Sequelize']
+        value: ['Node', 'bittorrent-dht', 'bittorrent-tracker', 'Mocha']
       }
     ],
     links: [
       {
-        title: 'Website',
-        href: 'https://Torrent.Report'
+        title: 'NPM',
+        href: 'https://www.npmjs.com/package/scrape-torrent-stats'
       },
       {
         title: 'GitHub Repo',
-        href: 'https://github.com/estepanov/torrentReport'
+        href: 'https://github.com/estepanov/scrapeTorrentStats'
       }
     ]
   },
   {
-    urlname: 'lazySQL',
-    name: 'lazySQL',
+    urlname: 'lazySuite',
+    name: 'lazyBuilder, lazySQL, and lazyExpress',
     description:
       'An unopinionated Sequelize model and association builder. You give us just the Sequelize objects/tables you want, we give you production ready JavaScript files implementing your sequlize models to use in your projects. This package can be used either as a dependency in another project, command line tool, or with lazyBuilder (our GUI).',
     images: [
@@ -212,12 +212,28 @@ const data = [
     ],
     links: [
       {
-        title: 'Website',
-        href: 'https://Torrent.Report'
+        title: 'Hackathon Presentation Video',
+        href: 'https://www.youtube.com/watch?v=L-FJCWB9SEM'
       },
       {
-        title: 'GitHub Repo',
-        href: 'https://github.com/estepanov/torrentReport'
+        title: 'lazyBuilder GitHub Repo',
+        href: 'https://github.com/brick-layers/lazyBuilder'
+      },
+      {
+        title: 'lazySql NPM',
+        href: 'https://www.npmjs.com/package/lazysql'
+      },
+      {
+        title: 'lazySql GitHub Repo',
+        href: 'https://github.com/brick-layers/lazySQL'
+      },
+      {
+        title: 'lazyExpress NPM',
+        href: 'https://www.npmjs.com/package/lazyexpress'
+      },
+      {
+        title: 'lazyExpress GitHub Repo',
+        href: 'https://github.com/brick-layers/lazyExpress'
       }
     ]
   }

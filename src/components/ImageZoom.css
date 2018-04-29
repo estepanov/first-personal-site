@@ -63,11 +63,14 @@
 }
 
 .zoom-img {
+  position: relative;
   border: solid 1px black;
+  cursor: zoom-out;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .image-zoom {
-  cursor: zoom-out;
   left: 0;
   top: 0;
   z-index: 100;
@@ -95,7 +98,35 @@
 }
 
 .image-zoom-place {
-  margin: 1em;
+  margin: 1em 0 0 0;
   color: white;
   opacity: 0.5;
+  letter-spacing: 2px;
+}
+.image-zoom-hints {
+  margin: 0;
+  color: white;
+  opacity: 0.2;
+  padding: 0px 5px 0px 5px;
+}
+
+.image-zoom-navigation {
+  font-size: 2em;
+  font-weight: bolder;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  z-index: 111;
+}
+
+.image-zoom-navigation-right {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+}
+
+.image-zoom-navigation-left {
+  position: fixed;
+  left: 10px;
+  top: 50%;
 }

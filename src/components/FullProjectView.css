@@ -18,10 +18,10 @@
 .project-bg-img {
   cursor: zoom-in;
   opacity: 0.4;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 0px;
-  /* border: solid 3px #dddddd; */
+  border: solid 1px #dddddd;
   margin: 1em;
   transition: opacity 1s ease-in-out;
   background-size: cover !important;
@@ -58,7 +58,7 @@
 
 .project-item-link-large {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -100,7 +100,7 @@
   /* font-size: 1.3em; */
   text-decoration: none;
   padding: 0 3px 1px 3px;
-  margin: 0 10px 0 0;
+  margin: 5px 10px 0 0;
   border-bottom: solid 1px darkgray;
   /* border-bottom: solid 1px darkgray; */
 }

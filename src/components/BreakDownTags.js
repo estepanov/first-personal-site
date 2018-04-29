@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import './BreakDownTags.css'
 
 class BreakDownTags extends Component {
@@ -7,7 +6,7 @@ class BreakDownTags extends Component {
     const { title, value } = this.props.breakdown
     if (!title) return <div />
     return (
-      <div key={`${title}`} className="breakdown-container">
+      <div className="breakdown-container">
         <ul className="break-down-item-tags">
           <li>
             <h4 id="project-tags-title">{title}</h4>

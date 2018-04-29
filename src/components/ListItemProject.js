@@ -6,14 +6,8 @@ import BreakDownTags from './BreakDownTags'
 
 class ListItemProject extends Component {
   render() {
-    const {
-      urlname,
-      name,
-      description,
-      images,
-      breakdown,
-      links
-    } = this.props.project
+    const { urlname, name, description, images, breakdown } = this.props.project
+    const imagesToDisplay = images.slice(0, 4) // only show first 4 images
     if (!name) return <div />
     return (
       <Link className="list-item" to={`/projects/${urlname}`}>
@@ -22,11 +16,13 @@ class ListItemProject extends Component {
 
         {breakdown &&
           breakdown.length &&
-          breakdown.map(group => <BreakDownTags breakdown={group} />)}
-        <div className="list-item-img-container">
-          {images &&
-            images.length &&
-            images.map(img => (
+          breakdown.map(group => (
+            <BreakDownTags key={group.title} breakdown={group} />
+          ))}
+        <div className="list-item-img-container fade-in one">
+          {imagesToDisplay &&
+            imagesToDisplay.length &&
+            imagesToDisplay.map(img => (
               <ImageBackground
                 key={`${img.url}-${img.title}`}
                 className="list-item-mini-img"

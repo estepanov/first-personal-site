@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './FullProjectView.css'
-import ImageZoom from './ImageZoom'
+import ImageCollection from './ImageCollection'
 import BreakDownTags from './BreakDownTags'
 import marked from 'marked'
 
@@ -44,13 +44,17 @@ class FullProjectView extends Component {
         <div className="project-item-footer">
           {breakdown &&
             breakdown.length &&
-            breakdown.map(group => <BreakDownTags breakdown={group} />)}
+            breakdown.map(group => (
+              <BreakDownTags key={group.title} breakdown={group} />
+            ))}
         </div>
-        <div className="project-item-images">
-          {images &&
-            images.length &&
-            images.map(img => <ImageZoom images={images} image={img} />)}
-        </div>
+        {images && (
+          <ImageCollection
+            imageHolderClassName="project-bg-img"
+            className="project-item-images fade-in"
+            images={images}
+          />
+        )}
 
         <div className="project-item-link-large">
           {links &&

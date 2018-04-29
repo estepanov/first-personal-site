@@ -5,7 +5,7 @@ const ImageBackground = ({ onClick, url, className }) => {
   return (
     <div
       onClick={onClick}
-      className={`${className} img-scale-hover`}
+      className={`${className}`}
       style={{
         background: `url(${url})`
       }}

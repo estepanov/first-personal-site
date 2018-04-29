@@ -35,31 +35,10 @@ export default class Contact extends Component {
     const updatedState = {}
     updatedState[key] = { ...state[key] }
     updatedState[key].value = value
-    if (state[key].dirty === false) updatedState[key].dirty = true
-    if (state[key].error) {
-      if (state[key].value.length > 2) updatedState[key].error = ''
-    } else {
-      if (state[key].value.length < 3)
-        updatedState[key].error = 'needs to be longer'
-    }
-    if (
-      !name.error &&
-      name.dirty &&
-      !email.error &&
-      email.dirty &&
-      !message.error &&
-      message.dirty &&
-      !updatedState[key].error &&
-      updatedState[key].dirty
-    ) {
-      updatedState.enableSubmit = true
-    } else {
-      updatedState.enableSubmit = false
-    }
-    // console.log(this.state)
     this.setState(updatedState)
-    console.log('-->', updatedState)
   }
+
+  validateInput = fieldObject => {}
 
   handleSubmit = event => {
     event.preventDefault()
@@ -121,9 +100,7 @@ export default class Contact extends Component {
             />
           </label>
           <div className="center">
-            {enableSubmit && (
-              <input className="contact-send-form" type="submit" value="Send" />
-            )}
+            <input className="contact-send-form" type="submit" value="Send" />
           </div>
         </form>
       </div>
