@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://estepanov.io",
   "dependencies": {
+    "axios": "^0.18.0",
     "d3-ease": "^1.0.3",
     "flubber": "^0.4.2",
     "marked": "^0.3.19",

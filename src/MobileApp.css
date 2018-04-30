@@ -20,4 +20,8 @@
   .list-item-mini-img {
     opacity: 0.9 !important;
   }
+
+  .hidden-on-mobile {
+    display: none;
+  }
 }

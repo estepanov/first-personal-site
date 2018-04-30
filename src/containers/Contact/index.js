@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import './Contact.css'
 
 export default class Contact extends Component {
@@ -22,7 +23,8 @@ export default class Contact extends Component {
       },
       enableSubmit: false,
       error: '',
-      sent: false
+      sent: false,
+      sending: false
     }
   }
   setStateValue = event => {
@@ -37,17 +39,115 @@ export default class Contact extends Component {
     updatedState[key].value = value
     this.setState(updatedState)
   }
+  sendMessage = postingObj => {
+    this.setState({ ...this.state, sending: true })
+    axios
+      .post(
+        'https://en7mzqeu1j.execute-api.us-east-1.amazonaws.com/deploy/sendMessage',
+        postingObj
+      )
+      .then(res => res.data)
+      .then(res => {
+        console.log(' ---- res ----', res)
+        this.setState({ ...this.state, sent: true })
+      })
+      .catch(err => this.setState({ ...this.state, error: err }))
+  }
 
-  validateInput = fieldObject => {}
+  validateInput = (fieldObject, fieldName) => {
+    const EMAIL_REGEX = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
+
+    switch (fieldName) {
+      case 'name': {
+        if (fieldObject.value.length < 5) {
+          return {
+            ...fieldObject,
+            error: 'Name needs to be atleast 5 letters long'
+          }
+        } else {
+          const newFieldObj = { ...fieldObject }
+          newFieldObj.error = ''
+          return newFieldObj
+        }
+        break
+      }
+      case 'email': {
+        const emailTest = EMAIL_REGEX.test(fieldObject.value)
+        console.log('emailTest', emailTest)
+        if (!emailTest) {
+          return {
+            ...fieldObject,
+            error: 'Not a valid email'
+          }
+        } else {
+          const newFieldObj = { ...fieldObject }
+          newFieldObj.error = ''
+          return newFieldObj
+        }
+        break
+      }
+      case 'message': {
+        if (fieldObject.value.length < 20) {
+          return {
+            ...fieldObject,
+            error: 'Message needs to be atleast 20 letters long'
+          }
+        } else {
+          const newFieldObj = { ...fieldObject }
+          newFieldObj.error = ''
+          return newFieldObj
+        }
+        break
+      }
+      default:
+        return false
+        break
+    }
+  }
 
   handleSubmit = event => {
     event.preventDefault()
-    this.setState({ sent: true })
+
     console.log('final state --> ', this.state)
+    const newState = {
+      ...this.state,
+      name: this.validateInput(this.state.name, 'name'),
+      email: this.validateInput(this.state.email, 'email'),
+      message: this.validateInput(this.state.message, 'message')
+    }
+    if (
+      !newState.name.error &&
+      !newState.email.error &&
+      !newState.message.error
+    ) {
+      // all good
+      this.setState(newState)
+      this.sendMessage({
+        name: newState.name.value,
+        email: newState.email.value,
+        message: newState.message.value
+      })
+    } else {
+      this.setState(newState)
+    }
   }
 
   render() {
-    const { enableSubmit, sent } = this.state
+    const { enableSubmit, sent, sending, error } = this.state
+    if (error) {
+      console.log('error')
+      console.log(error)
+      return (
+        <div className="center">
+          <div>
+            <h2>Whoops!</h2>
+            <p>
+              Sorry, we couldn't mail your message. This error has been logged.
+            </p>
+          </div>
+        </div>
+      )
+    }
     if (sent)
       return (
         <div className="center">
@@ -60,6 +160,15 @@ export default class Contact extends Component {
           </div>
         </div>
       )
+    if (sending)
+      return (
+        <div className="center">
+          <div>
+            <h2>Sending</h2>
+            <p>Your message is now being emailed to me.</p>
+          </div>
+        </div>
+      )
     return (
       <div className="center">
         <form className="contact-form" onSubmit={this.handleSubmit}>
@@ -68,7 +177,6 @@ export default class Contact extends Component {
               value={this.state.name.value}
               type="text"
               name="name"
-              placeholder="Master Chief"
               onChange={this.setStateValue}
             />
             {this.state.name.error}
@@ -79,7 +187,6 @@ export default class Contact extends Component {
               value={this.state.email.value}
               type="text"
               name="email"
-              placeholder="MasterChief@UNSC.gov"
               onChange={this.setStateValue}
             />
             {this.state.email.error}
@@ -95,7 +202,7 @@ export default class Contact extends Component {
               value={this.state.message.value}
               name="message"
               rows="10"
-              placeholder="Your message goes here..."
+              placeholder="Hello Evans,"
               onChange={this.setStateValue}
             />
           </label>

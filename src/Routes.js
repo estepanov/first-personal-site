@@ -12,6 +12,7 @@ export default () => (
     <Route path="/" exact component={About} />
     <Route path="/about" exact component={About} />
     <Route path="/blog" exact component={Blog} />
+    <Route path="/projects/tag/:tag" component={Projects} />
     <Route path="/projects" exact component={Projects} />
     <Route path="/projects/:project" component={SingleProject} />
     <Route path="/contact" exact component={Contact} />

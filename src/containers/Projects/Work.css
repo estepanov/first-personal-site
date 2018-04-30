@@ -6,3 +6,66 @@
   display: flex;
   flex-direction: column;
 }
+
+.tag-current {
+  font-size: 0.8em;
+
+  font-style: italic;
+  padding: 20px;
+  color: rgb(158, 158, 158);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* border-top: solid 1px rgb(241, 241, 241); */
+  /* border-bottom: solid 1px rgb(241, 241, 241); */
+}
+
+.tag-current b {
+  margin: 0 10px 0 10px;
+  font-weight: bolder;
+  color: rgba(195, 0, 255, 0.5);
+}
+
+.tag-button {
+  font-style: normal;
+  margin: 0 10px 0 10px;
+  padding: 5px 20px 5px 20px;
+  border: solid 1px rgb(241, 241, 241);
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+  transition: background 1s ease, color 1s ease;
+}
+
+.tag-button:hover {
+  transition: background 1s ease, color 1s ease;
+  background-color: rgb(199, 199, 199);
+  color: white;
+}
+
+.tag-filter-list {
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-filter-list a,
+.tag-filter-list a:visited {
+  /* padding: 0 3px 0 3px; */
+  margin: 3px 20px 0 0;
+  color: #c7c7c7;
+  text-decoration: none;
+  transition: background 1s ease, color 1s ease;
+  /* border-bottom: solid 1px white; */
+}
+
+.tag-filter-list a:hover {
+  color: #c300ff;
+  transition: background 1s ease, color 1s ease;
+  /* border-bottom: solid 1px #c300ff; */
+}

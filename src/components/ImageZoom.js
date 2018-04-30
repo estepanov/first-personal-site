@@ -126,7 +126,9 @@ export default class ImageZoom extends Component {
           <h1 className={this.fadeInManaged('fade-in one', 'center')}>
             {currentTitle}
           </h1>
-          {currentDescription && <p>{currentDescription}</p>}
+          {currentDescription && (
+            <p className="image-zoom-desc">{currentDescription}</p>
+          )}
           <br />
           <img
             alt={`${currentTitle} - ${currentDescription}`}
@@ -137,18 +139,18 @@ export default class ImageZoom extends Component {
           <div className="image-zoom-place center">
             {arrayPointer + 1} of {images.length}
           </div>
-          <div className="image-zoom-hints center">
+          <div className="image-zoom-hints center hidden-on-mobile">
             <b>HINT</b>
           </div>
-          <div className="image-zoom-hints center">
+          <div className="image-zoom-hints center hidden-on-mobile">
             Hit escape key or click anywhere except the arrow signs to close.
           </div>
-          <div className="image-zoom-hints center">
+          <div className="image-zoom-hints center hidden-on-mobile">
             You can also navigate all the images using your keyboard's
             arrowkeys.
           </div>
 
-          <div className="logo-overlay center">
+          <div className="logo-overlay center hidden-on-mobile">
             <Logo style={{ fill: '#ffffff' }} height="40" alt="logo" />
           </div>
         </div>

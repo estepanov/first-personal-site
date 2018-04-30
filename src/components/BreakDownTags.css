@@ -23,7 +23,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #a1a1a1;
   font-weight: lighter;
+  cursor: pointer;
 }
+
+#break-down-target {
+  color: #c300ff;
+}
+
+#tag-link {
+  color: #a1a1a1;
+}
+
 .break-down-item-tags li h4 {
   font-size: 18px;
   padding: 0;
