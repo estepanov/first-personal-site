@@ -14,26 +14,30 @@ export default class About extends Component {
           currently working on and ones I have contributed to in the past.
         </p>
         <p>
-          While I do often find myself coding or reading about software during
-          my free time. Occasionally I can be found binge-playing Halo on Xbox
-          or Battlefield One on the PC.
+          I spend most of my time coding, reading code, or reading about
+          software. Winter is my favorite season and skiing on fresh powder is
+          the highlight of every winter. Occasionally, I can be found
+          binge-playing Halo on Xbox or Battlefield One on the PC.
         </p>
 
-        <h3>Background</h3>
+        <h2>About Me</h2>
         <p>
           The world wide web, and computers in general, captivated me at young
-          age. I learned some HTML and CSS while in middle school. Then picked
-          up some PHP from various books and tutorials online. In high school I
-          started a video game tournament website.
+          age. I first learned HTML and CSS while in middle school. Then picked
+          up PHP from various books and tutorials online. In high school I
+          started a video game tournament website. Although the tournament
+          website was not financially succesful, it was an especially insightful
+          experience developmenting and managing a product.
         </p>
+
         <p>
-          I studied Accounting and Business Economics at the University of
-          Arizona. Later I attended Fullstack Academy.
+          I recieved a Bachelor of Science in Accounting and Business Economics
+          from the University of Arizona, International Diploma in Brewing
+          Technology from Siebel Institute of Technology, and completed Full
+          Stack Academy's Software Engineering Immersive program.
         </p>
-        <p>
-          Like many others, what I studied in college is not directly related to
-          what I do today.
-        </p>
+
+        <p>...</p>
       </div>
     )
   }

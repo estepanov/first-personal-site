@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import './BreakDownTags.css'
 
 class BreakDownTags extends Component {
@@ -12,7 +12,6 @@ class BreakDownTags extends Component {
   render() {
     const { title, value } = this.props.breakdown
     const target = this.props.match.params.tag
-    console.log('tagret', target)
     if (!title) return <div />
     return (
       <div className="breakdown-container">

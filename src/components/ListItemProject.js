@@ -19,7 +19,8 @@ class ListItemProject extends Component {
           breakdown.map(group => (
             <BreakDownTags key={group.title} breakdown={group} />
           ))}
-        <div className="list-item-img-container fade-in one">
+
+        <div className="list-item-img-container">
           {imagesToDisplay &&
             imagesToDisplay.length &&
             imagesToDisplay.map(img => (

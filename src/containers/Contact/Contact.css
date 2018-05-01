@@ -21,6 +21,8 @@
   padding: 10px 5px 10px 5px;
   width: 100%;
   border-bottom: solid 1px gray;
+  outline: none;
+  resize: none;
 }
 
 #message-label {
@@ -42,6 +44,24 @@
   font-size: 0.9em;
   border-radius: 0px;
   text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border: solid 1px white;
+  transition: background 1s ease, color 1s ease, border 1s ease;
+}
+
+.contact-send-form:hover {
+  background-color: white;
+  color: #00b4ff;
+  transition: background 1s ease, color 1s ease, border 1s ease;
+  border: solid 1px #00b4ff;
+}
+
+.contact-send-form:active {
+  transition: none;
+  background-color: grey;
+  color: white;
+  border: solid 1px white;
 }
 
 #contact-form-error {

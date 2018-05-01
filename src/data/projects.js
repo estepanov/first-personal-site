@@ -33,7 +33,14 @@ const data = [
     breakdown: [
       {
         title: 'Frontend',
-        value: ['React', 'React-Router', 'Webpack']
+        value: [
+          'React',
+          'React-Router-DOM',
+          'Redux',
+          'Post CSS',
+          'SASS',
+          'Webpack'
+        ]
       },
       {
         title: 'Backend',
@@ -97,9 +104,8 @@ const data = [
         title: 'Frontend',
         value: [
           'React',
-          'React-Router',
+          'React-Router-DOM',
           'Redux',
-          'Axios',
           'Bulma CSS',
           'Jest',
           'Webpack'
@@ -107,16 +113,7 @@ const data = [
       },
       {
         title: 'Backend',
-        value: [
-          'Node',
-          'Express',
-          'Simple Git',
-          'Morgan',
-          'Lodash',
-          'Mocha',
-          'Postgres',
-          'Sequelize'
-        ]
+        value: ['Node', 'Express', 'Mocha', 'Postgres', 'Sequelize']
       }
     ],
     links: [
@@ -200,14 +197,7 @@ const data = [
     breakdown: [
       {
         title: 'Frontend',
-        value: [
-          'Electron',
-          'React',
-          'React-Router',
-          'Redux',
-          'Webpack',
-          'Commander'
-        ]
+        value: ['Electron', 'React', 'React-Router-DOM', 'Redux', 'Webpack']
       }
     ],
     links: [

@@ -21,6 +21,10 @@
     opacity: 0.9 !important;
   }
 
+  .tag-current {
+    flex-direction: column;
+  }
+
   .hidden-on-mobile {
     display: none;
   }

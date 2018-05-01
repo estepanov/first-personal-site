@@ -28,12 +28,9 @@ export default class Contact extends Component {
     }
   }
   setStateValue = event => {
-    const { name, email, message } = this.state
     const { value } = event.target
     const key = event.target.name
     const { state } = this
-    console.log(state[key])
-    console.log(key, value, value.length)
     const updatedState = {}
     updatedState[key] = { ...state[key] }
     updatedState[key].value = value
@@ -65,24 +62,19 @@ export default class Contact extends Component {
             error: 'Name needs to be atleast 5 letters long'
           }
         } else {
-          const newFieldObj = { ...fieldObject }
-          newFieldObj.error = ''
-          return newFieldObj
+          return clearErrorFromObj(fieldObject)
         }
         break
       }
       case 'email': {
         const emailTest = EMAIL_REGEX.test(fieldObject.value)
-        console.log('emailTest', emailTest)
         if (!emailTest) {
           return {
             ...fieldObject,
             error: 'Not a valid email'
           }
         } else {
-          const newFieldObj = { ...fieldObject }
-          newFieldObj.error = ''
-          return newFieldObj
+          return clearErrorFromObj(fieldObject)
         }
         break
       }
@@ -93,9 +85,7 @@ export default class Contact extends Component {
             error: 'Message needs to be atleast 20 letters long'
           }
         } else {
-          const newFieldObj = { ...fieldObject }
-          newFieldObj.error = ''
-          return newFieldObj
+          return clearErrorFromObj(fieldObject)
         }
         break
       }
@@ -213,4 +203,10 @@ export default class Contact extends Component {
       </div>
     )
   }
+}
+
+const clearErrorFromObj = fieldObject => {
+  const newFieldObj = { ...fieldObject }
+  newFieldObj.error = ''
+  return newFieldObj
 }
