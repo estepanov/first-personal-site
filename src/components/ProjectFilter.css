@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  margin: 0 0 2em 0;
 }
 
 .proj-filter-toggle {

@@ -123,9 +123,14 @@ export default class ImageZoom extends Component {
           className="image-zoom center"
           onClick={this.props.toggleVisabilityFunc}
         >
-          <h1 className={this.fadeInManaged('fade-in one', 'center')}>
+          <h3
+            className={this.fadeInManaged(
+              'fade-in one',
+              'center zoom-img-title'
+            )}
+          >
             {currentTitle}
-          </h1>
+          </h3>
           {currentDescription && (
             <p className="image-zoom-desc">{currentDescription}</p>
           )}

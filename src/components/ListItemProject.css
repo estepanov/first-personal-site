@@ -6,7 +6,7 @@
   text-decoration: none;
   background-color: rgba(206, 206, 206, 0.1);
   /* border: solid 1px gray; */
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out,
     background 0.5s ease-in-out;
 }
@@ -47,6 +47,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  max-height: 156px;
+  overflow: hidden;
 }
 
 .list-item-mini-img {

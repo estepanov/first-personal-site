@@ -36,24 +36,23 @@
 }
 
 .contact-send-form {
+  border-radius: none;
   background-color: #00b4ff;
   padding: 10px 40px 10px 40px;
-  border: none;
+  border: solid 1px #00b4ff;
   color: white;
   letter-spacing: 4px;
   font-size: 0.9em;
-  border-radius: 0px;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
-  border: solid 1px white;
-  transition: background 1s ease, color 1s ease, border 1s ease;
+  transition: background 1s ease, color 1s ease;
 }
 
 .contact-send-form:hover {
   background-color: white;
   color: #00b4ff;
-  transition: background 1s ease, color 1s ease, border 1s ease;
+  transition: background 1s ease, color 1s ease;
   border: solid 1px #00b4ff;
 }
 
