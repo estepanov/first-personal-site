@@ -35,7 +35,7 @@ const data = [
         title: 'Frontend',
         value: [
           'React',
-          'React-Router-DOM',
+          'React-router-dom',
           'Redux',
           'Post CSS',
           'SASS',
@@ -104,7 +104,7 @@ const data = [
         title: 'Frontend',
         value: [
           'React',
-          'React-Router-DOM',
+          'React-router-dom',
           'Redux',
           'Bulma CSS',
           'Jest',
@@ -149,7 +149,7 @@ const data = [
     breakdown: [
       {
         title: 'Backend',
-        value: ['Node', 'bittorrent-dht', 'bittorrent-tracker', 'Mocha']
+        value: ['Node', 'Bittorrent-dht', 'Bittorrent-tracker', 'Mocha']
       }
     ],
     links: [
@@ -197,7 +197,7 @@ const data = [
     breakdown: [
       {
         title: 'Frontend',
-        value: ['Electron', 'React', 'React-Router-DOM', 'Redux', 'Webpack']
+        value: ['Electron', 'React', 'React-router-dom', 'Redux', 'Webpack']
       }
     ],
     links: [

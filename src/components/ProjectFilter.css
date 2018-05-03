@@ -11,18 +11,16 @@
 }
 
 .tag-current {
+  margin: 0 0 2em 0;
   font-size: 0.8em;
   font-style: italic;
   padding: 0;
-  /* padding: 20px; */
   color: rgb(158, 158, 158);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* border-top: solid 1px rgb(241, 241, 241); */
-  /* border-bottom: solid 1px rgb(241, 241, 241); */
 }
 
 .tag-current p {
@@ -32,7 +30,6 @@
 }
 
 .tag-current b {
-  /* padding:  */
   margin: 5px;
   font-weight: bolder;
   text-align: center;
@@ -71,16 +68,13 @@
 .tag-filter-list a:visited,
 .tag-filter-list a:active,
 .tag-filter-list a:focus {
-  /* padding: 0 3px 0 3px; */
   margin: 3px 20px 0 0;
   color: #c7c7c7;
   text-decoration: none;
-  transition: background 1s ease, color 1s ease;
-  /* border-bottom: solid 1px white; */
+  transition: color 1s ease;
 }
 
 .tag-filter-list a:hover {
   color: #c300ff;
-  transition: background 1s ease, color 1s ease;
-  /* border-bottom: solid 1px #c300ff; */
+  transition: color 1s ease;
 }
