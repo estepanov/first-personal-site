@@ -7,15 +7,15 @@ import './ImageZoom.css'
 export default class ImageZoom extends Component {
   constructor(props) {
     super(props)
-    const { src, title, description } = props.image
+    const { url, title, description } = props.image
     const { images } = props
     let arrayPointer
     images.forEach((item, index) => {
-      if (item.src === src) arrayPointer = index
+      if (item.url === url) arrayPointer = index
     })
     this.state = {
       initial: true,
-      currentSrc: src,
+      currentUrl: url,
       currentTitle: title,
       currentDescription: description,
       images,
@@ -30,7 +30,7 @@ export default class ImageZoom extends Component {
     this.setState({
       initial: false,
       arrayPointer: newPointer,
-      currentSrc: this.state.images[newPointer].src,
+      currentUrl: this.state.images[newPointer].url,
       currentTitle: this.state.images[newPointer].title,
       currentDescription: this.state.images[newPointer].description
     })
@@ -43,7 +43,7 @@ export default class ImageZoom extends Component {
     this.setState({
       initial: false,
       arrayPointer: newPointer,
-      currentSrc: this.state.images[newPointer].src,
+      currentUrl: this.state.images[newPointer].url,
       currentTitle: this.state.images[newPointer].title,
       currentDescription: this.state.images[newPointer].description
     })
@@ -87,7 +87,7 @@ export default class ImageZoom extends Component {
 
   render() {
     const {
-      currentSrc,
+      currentUrl,
       currentTitle,
       currentDescription,
       arrayPointer,
@@ -124,17 +124,14 @@ export default class ImageZoom extends Component {
           <img
             alt={`${currentTitle} - ${currentDescription}`}
             className={this.fadeInManaged('fade-in one', 'zoom-img center')}
-            src={currentSrc}
+            src={currentUrl}
             onClick={this.props.toggleVisabilityFunc}
           />
-          <h3
-            className={this.fadeInManaged(
-              'fade-in one',
-              'center zoom-img-title'
-            )}
-          >
+
+          <h3 className={this.fadeInManaged('fade-in one', 'zoom-img-title')}>
             {currentTitle}
           </h3>
+
           {currentDescription && (
             <p className="image-zoom-desc">{currentDescription}</p>
           )}

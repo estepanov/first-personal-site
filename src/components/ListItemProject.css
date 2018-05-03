@@ -4,9 +4,7 @@
   padding: 1em;
   color: #707070;
   text-decoration: none;
-  background-color: rgba(206, 206, 206, 0.1);
-  opacity: 1;
-  transition: color 0.5s ease, background 0.5s ease;
+  background-color: #f5f5f5;
 }
 
 .project-list a:hover > h2 {
@@ -15,7 +13,9 @@
 }
 
 .list-item h2 {
+  color: #707070;
   margin: 0px !important;
+  transition: color 0.5s ease;
 }
 
 .list-item p {

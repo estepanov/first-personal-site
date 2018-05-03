@@ -5,7 +5,6 @@ import FullProjectView from '../../components/FullProjectView'
 
 class SingleProject extends Component {
   render() {
-    console.log(this.props)
     const { project } = this.props.match.params
     if (!project) return <div>No Project</div>
     const searchName = project.toLowerCase()

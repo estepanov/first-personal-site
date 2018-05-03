@@ -35,6 +35,7 @@ export default class ImageCollection extends Component {
             )}
           {images.map(img => (
             <Image
+              key={`${img.url}-${img.title}`}
               onClick={() => this.toggle(img)}
               className={this.props.imageHolderClassName}
               img={img}

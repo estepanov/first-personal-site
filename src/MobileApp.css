@@ -17,10 +17,6 @@
     justify-content: center;
   }
 
-  .list-item-mini-img {
-    /* opacity: 0.9 !important; */
-  }
-
   .tag-current {
     flex-direction: column;
   }

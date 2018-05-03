@@ -51,7 +51,7 @@ class FullProjectView extends Component {
         {images && (
           <ImageCollection
             imageHolderClassName="project-bg-img"
-            className="project-item-images fade-in"
+            className="project-item-images fade-in one"
             images={images}
           />
         )}

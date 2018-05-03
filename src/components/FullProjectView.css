@@ -17,9 +17,8 @@
 
 .project-bg-img {
   cursor: zoom-in;
-  height: 200px;
-  border-radius: 0px;
-  border: solid 1px #b1b1b1;
+  width: 200px;
+  border: solid 1px #e7e7e7;
   margin: 1em;
 }
 

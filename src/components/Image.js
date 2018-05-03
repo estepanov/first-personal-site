@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Image = ({ onClick, src, className, img }) => {
+const Image = ({ onClick, className, img }) => {
   return (
     <img
-      key={`${img.url}-${img.title}`}
-      src={img.src}
+      src={img.url}
       onClick={onClick}
       alt={img.title}
       className={`${className}`}
