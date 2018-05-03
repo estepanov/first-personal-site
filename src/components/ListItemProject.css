@@ -2,25 +2,15 @@
 .project-list a:visited {
   margin: 1em;
   padding: 1em;
-  color: #969696;
+  color: #707070;
   text-decoration: none;
   background-color: rgba(206, 206, 206, 0.1);
-  /* border: solid 1px gray; */
   opacity: 1;
-  transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out,
-    background 0.5s ease-in-out;
-}
-
-.project-list a:hover {
-  color: #707070;
-  opacity: 1;
-  background-color: rgba(220, 104, 255, 0.1);
-  transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out,
-    background 0.5s ease-in-out;
+  transition: color 0.5s ease, background 0.5s ease;
 }
 
 .project-list a:hover > h2 {
-  transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease;
   color: #c300ff !important;
 }
 
@@ -50,16 +40,9 @@
 .list-item-mini-img {
   filter: grayscale(100%);
   border: solid 3px #ffffff;
-  /* border-radius: 50%; */
-  /* opacity: 0.5; */
   margin: 10px 10px 0 0;
-  /* transition: opacity 1s ease-in; */
-  height: 150px;
-  width: 150px;
+  height: 140px;
   background-color: rgba(206, 206, 206, 0.1);
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
 }
 
 .slow-fade-in {

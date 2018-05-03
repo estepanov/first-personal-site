@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './ListItemProject.css'
-import ImageBackground from './ImageBackground'
+import Image from './Image'
 import BreakDownTags from './BreakDownTags'
 
 class ListItemProject extends Component {
   render() {
     const { urlname, name, description, images, breakdown } = this.props.project
-    const imagesToDisplay = images.slice(0, 4) // only show first 4 images
+    const imagesToDisplay = images.slice(0, 3) // only show first 3 images
     if (!name) return <div />
     return (
       <Link className="list-item" to={`/projects/${urlname}`}>
@@ -24,10 +24,12 @@ class ListItemProject extends Component {
           {imagesToDisplay &&
             imagesToDisplay.length &&
             imagesToDisplay.map(img => (
-              <ImageBackground
+              <Image
+                img={img}
+                alt={img.title}
                 key={`${img.url}-${img.title}`}
                 className="list-item-mini-img"
-                url={img.url}
+                src={img.src}
               />
             ))}
         </div>

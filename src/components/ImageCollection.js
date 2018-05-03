@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ImageBackground from './ImageBackground'
+import Image from './Image'
 import ImageZoom from './ImageZoom'
 
 import './ImageCollection.css'
@@ -34,11 +34,10 @@ export default class ImageCollection extends Component {
               />
             )}
           {images.map(img => (
-            <ImageBackground
-              key={`${img.title}-${img.url}`}
+            <Image
               onClick={() => this.toggle(img)}
               className={this.props.imageHolderClassName}
-              url={img.url}
+              img={img}
             />
           ))}
         </div>

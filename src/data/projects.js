@@ -1,3 +1,27 @@
+import tr1 from '../imgs/tr/1.png'
+import tr2 from '../imgs/tr/2.png'
+import tr3 from '../imgs/tr/3.png'
+import tr4 from '../imgs/tr/4.png'
+import tr5 from '../imgs/tr/5.png'
+import tr6 from '../imgs/tr/6.png'
+
+import bpp1 from '../imgs/bpp/1.png'
+import bpp2 from '../imgs/bpp/2.png'
+import bpp3 from '../imgs/bpp/3.png'
+import bpp4 from '../imgs/bpp/4.png'
+import bpp5 from '../imgs/bpp/5.png'
+import bpp6 from '../imgs/bpp/6.png'
+
+import scrapetorrentstats1 from '../imgs/scrapetorrentstats/1.png'
+import scrapetorrentstats2 from '../imgs/scrapetorrentstats/2.png'
+
+import lazysqlSplash from '../imgs/lazysql/splash.png'
+import lazysqlDB from '../imgs/lazysql/db.png'
+import lazysqlModel from '../imgs/lazysql/model.png'
+import lazysqlAssoc from '../imgs/lazysql/assoc.png'
+import lazysqlFinalAsoc from '../imgs/lazysql/final-asoc.png'
+import lazysqlSave from '../imgs/lazysql/save.png'
+
 const data = [
   {
     urlname: 'TorrentReport',
@@ -7,27 +31,27 @@ const data = [
     images: [
       {
         title: 'Home',
-        url: '/imgs/tr/1.png'
+        src: tr1
       },
       {
         title: 'All New Listings',
-        url: '/imgs/tr/2.png'
+        src: tr2
       },
       {
         title: 'Search All New Listings',
-        url: '/imgs/tr/3.png'
+        src: tr3
       },
       {
         title: 'Torrent Name',
-        url: '/imgs/tr/4.png'
+        src: tr4
       },
       {
         title: 'Torrent Info',
-        url: '/imgs/tr/5.png'
+        src: tr5
       },
       {
         title: 'Login',
-        url: '/imgs/tr/6.png'
+        src: tr6
       }
     ],
     breakdown: [
@@ -76,27 +100,27 @@ const data = [
     images: [
       {
         title: 'Home Page',
-        url: '/imgs/bpp/1.png'
+        src: bpp1
       },
       {
         title: 'Logged Out Home Page ',
-        url: '/imgs/bpp/2.png'
+        src: bpp2
       },
       {
         title: 'Repo Read Me Page',
-        url: '/imgs/bpp/3.png'
+        src: bpp3
       },
       {
         title: 'Integration Choices',
-        url: '/imgs/bpp/4.png'
+        src: bpp4
       },
       {
         title: 'Deployment Choices',
-        url: '/imgs/bpp/5.png'
+        src: bpp5
       },
       {
         title: 'User Cloned Repos',
-        url: '/imgs/bpp/6.png'
+        src: bpp6
       }
     ],
     breakdown: [
@@ -139,11 +163,11 @@ const data = [
     images: [
       {
         title: 'Yarn Run Example',
-        url: '/imgs/scrapetorrentstats/1.png'
+        src: scrapetorrentstats1
       },
       {
         title: 'CLI Result',
-        url: '/imgs/scrapetorrentstats/2.png'
+        src: scrapetorrentstats2
       }
     ],
     breakdown: [
@@ -171,27 +195,27 @@ const data = [
     images: [
       {
         title: 'Home',
-        url: '/imgs/lazysql/splash.png'
+        src: lazysqlSplash
       },
       {
         title: 'Define your Database',
-        url: '/imgs/lazysql/db.png'
+        src: lazysqlDB
       },
       {
         title: 'Define your Model',
-        url: '/imgs/lazysql/model.png'
+        src: lazysqlModel
       },
       {
         title: 'Add an Association',
-        url: '/imgs/lazysql/assoc.png'
+        src: lazysqlAssoc
       },
       {
         title: 'Review Associations',
-        url: '/imgs/lazysql/final-asoc.png'
+        src: lazysqlFinalAsoc
       },
       {
         title: 'Save Configuration File',
-        url: '/imgs/lazysql/save.png'
+        src: lazysqlSave
       }
     ],
     breakdown: [

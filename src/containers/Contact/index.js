@@ -21,7 +21,6 @@ export default class Contact extends Component {
         value: '',
         error: ''
       },
-      enableSubmit: false,
       error: '',
       sent: false,
       sending: false
@@ -52,46 +51,37 @@ export default class Contact extends Component {
   }
 
   validateInput = (fieldObject, fieldName) => {
+    // eslint-disable-next-line
     const EMAIL_REGEX = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
 
     switch (fieldName) {
       case 'name': {
-        if (fieldObject.value.length < 5) {
+        if (fieldObject.value.length < 5)
           return {
             ...fieldObject,
             error: 'Name needs to be atleast 5 letters long'
           }
-        } else {
-          return clearErrorFromObj(fieldObject)
-        }
-        break
+        return clearErrorFromObj(fieldObject)
       }
       case 'email': {
         const emailTest = EMAIL_REGEX.test(fieldObject.value)
-        if (!emailTest) {
+        if (!emailTest)
           return {
             ...fieldObject,
             error: 'Not a valid email'
           }
-        } else {
-          return clearErrorFromObj(fieldObject)
-        }
-        break
+        return clearErrorFromObj(fieldObject)
       }
       case 'message': {
-        if (fieldObject.value.length < 20) {
+        if (fieldObject.value.length < 20)
           return {
             ...fieldObject,
             error: 'Message needs to be atleast 20 letters long'
           }
-        } else {
-          return clearErrorFromObj(fieldObject)
-        }
-        break
+        return clearErrorFromObj(fieldObject)
       }
       default:
         return false
-        break
     }
   }
 
@@ -123,7 +113,7 @@ export default class Contact extends Component {
   }
 
   render() {
-    const { enableSubmit, sent, sending, error } = this.state
+    const { sent, sending, error } = this.state
     if (error) {
       console.log('error')
       console.log(error)

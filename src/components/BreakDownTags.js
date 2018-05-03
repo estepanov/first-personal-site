@@ -3,9 +3,6 @@ import { withRouter } from 'react-router-dom'
 import './BreakDownTags.css'
 
 class BreakDownTags extends Component {
-  constructor(props) {
-    super(props)
-  }
   goToTaggedProjects = tag => () =>
     this.props.history.push(`/projects/tag/${tag}`)
 

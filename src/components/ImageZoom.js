@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
 import Logo from '../svg/logo'
-// import RightArrowHover from '../svg/arrows/RightArrowHover'
 import RightArrow from '../svg/arrows/RightArrow'
-// import LeftArrowHover from '../svg/arrows/LeftArrowHover'
 import LeftArrow from '../svg/arrows/LeftArrow'
 import './ImageZoom.css'
 
 export default class ImageZoom extends Component {
   constructor(props) {
     super(props)
-    const { url, title, description } = props.image
+    const { src, title, description } = props.image
     const { images } = props
     let arrayPointer
     images.forEach((item, index) => {
-      if (item.url === url) arrayPointer = index
+      if (item.src === src) arrayPointer = index
     })
     this.state = {
       initial: true,
-      currentUrl: url,
+      currentSrc: src,
       currentTitle: title,
       currentDescription: description,
       images,
@@ -32,7 +30,7 @@ export default class ImageZoom extends Component {
     this.setState({
       initial: false,
       arrayPointer: newPointer,
-      currentUrl: this.state.images[newPointer].url,
+      currentSrc: this.state.images[newPointer].src,
       currentTitle: this.state.images[newPointer].title,
       currentDescription: this.state.images[newPointer].description
     })
@@ -45,7 +43,7 @@ export default class ImageZoom extends Component {
     this.setState({
       initial: false,
       arrayPointer: newPointer,
-      currentUrl: this.state.images[newPointer].url,
+      currentSrc: this.state.images[newPointer].src,
       currentTitle: this.state.images[newPointer].title,
       currentDescription: this.state.images[newPointer].description
     })
@@ -89,7 +87,7 @@ export default class ImageZoom extends Component {
 
   render() {
     const {
-      currentUrl,
+      currentSrc,
       currentTitle,
       currentDescription,
       arrayPointer,
@@ -126,7 +124,7 @@ export default class ImageZoom extends Component {
           <img
             alt={`${currentTitle} - ${currentDescription}`}
             className={this.fadeInManaged('fade-in one', 'zoom-img center')}
-            src={currentUrl}
+            src={currentSrc}
             onClick={this.props.toggleVisabilityFunc}
           />
           <h3

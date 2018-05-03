@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import './About.css'
+import me from '../../imgs/me.png'
 
 export default class About extends Component {
   render() {
     return (
       <div className="About content-fixed">
-        <img className="about-image" src="/me.png" alt="me :)" />
+        <img className="about-image" src={me} alt="me :)" />
 
         <h3>Hello!</h3>
         <p>
