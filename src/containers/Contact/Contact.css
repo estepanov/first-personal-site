@@ -15,7 +15,9 @@
 
 .contact-form label input,
 .contact-form label textarea {
-  border-radius: 0px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
   font-size: 16px;
   border: none;
   padding: 10px 5px 10px 5px;
@@ -23,6 +25,11 @@
   border-bottom: solid 1px gray;
   outline: none;
   resize: none;
+}
+
+.contact-form label input:focus {
+  border-bottom: solid 2px gray;
+  padding: 10px 5px 8px 5px;
 }
 
 #message-label {
@@ -33,10 +40,17 @@
   margin: 0.2em 0 0 0;
   /* border: solid 1px #e9e9e9; */
   border: none;
+  padding: 6px;
+}
+#message-label textarea:focus {
+  /* margin: 0.2em 0 0 0; */
+  padding: 5px;
+  border: solid 1px #e9e9e9;
+  /* border: none; */
 }
 
 .contact-send-form {
-  border-radius: none;
+  border-radius: 0;
   background-color: #00b4ff;
   padding: 10px 40px 10px 40px;
   border: solid 1px #00b4ff;
@@ -49,7 +63,8 @@
   transition: background 1s ease, color 1s ease;
 }
 
-.contact-send-form:hover {
+.contact-send-form:hover,
+.contact-send-form:focus {
   background-color: white;
   color: #00b4ff;
   transition: background 1s ease, color 1s ease;

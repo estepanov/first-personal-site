@@ -12,7 +12,7 @@ export default class Work extends Component {
     if (tag) taggedProjects = searchAllTags(projectsData, tag)
 
     return (
-      <div className="projects content-fixed">
+      <div className="projects content-fixed fade-in">
         <ProjectFilter
           tag={tag}
           taggedProjects={taggedProjects}

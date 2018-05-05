@@ -1,17 +1,20 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import axios from 'axios'
 import './Blog.css'
+import BlogPostList from '../../components/BlogPostList'
+
+import posts from '../../data/blog'
 
 export default class Blog extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      posts: [],
+      posts,
       user: {}
     }
   }
   componentDidMount = () => {
-    this.fetchPosts()
+    // this.fetchPosts()
   }
   fetchPosts = () => {
     axios
@@ -24,6 +27,7 @@ export default class Blog extends Component {
       <div>
         <h1>my blog</h1>
         <p>I am still working on this site.</p>
+        <BlogPostList posts={posts}/>
       </div>
     )
   }

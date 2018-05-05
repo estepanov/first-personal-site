@@ -20,6 +20,7 @@
   width: 200px;
   border: solid 1px #e7e7e7;
   margin: 1em;
+  background-color: lightgray;
 }
 
 .projects .project-item h1 {
@@ -52,10 +53,11 @@
 }
 
 .project-item-link-large a {
+  text-align: center;
   padding: 3px;
   margin: 0 15px 0 15px;
   transition: color 1s ease-out;
-  color: darkgray;
+  color: #b8b8b8;
   font-size: 1.3em;
   text-decoration: none;
 }

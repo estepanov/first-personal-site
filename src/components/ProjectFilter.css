@@ -12,7 +12,8 @@
 
 .tag-current {
   margin: 0 0 2em 0;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  font-family: 'Rubik', sans-serif;
   font-style: italic;
   padding: 0;
   color: rgb(158, 158, 158);
@@ -31,7 +32,7 @@
 
 .tag-current b {
   margin: 5px;
-  font-weight: bolder;
+  font-weight: normal;
   text-align: center;
   color: rgba(195, 0, 255, 0.5);
 }
@@ -58,6 +59,7 @@
   font-size: 0.8em;
   justify-content: center;
   align-items: center;
+  font-family: 'Rubik', sans-serif;
   padding: 0;
   margin: 0;
   display: flex;

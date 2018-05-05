@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Image from './Image'
 import ImageZoom from './ImageZoom'
 
-import './ImageCollection.css'
-
 export default class ImageCollection extends Component {
   constructor(props) {
     super(props)

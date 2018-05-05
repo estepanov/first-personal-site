@@ -24,7 +24,7 @@ class ListItemProject extends Component {
           {imagesToDisplay &&
             imagesToDisplay.length &&
             imagesToDisplay.map(img => (
-              <Image img={img} className="list-item-mini-img fade-in" />
+              <Image img={img} className="list-item-mini-img" />
             ))}
         </div>
       </Link>

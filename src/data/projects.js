@@ -3,7 +3,7 @@ const data = [
     urlname: 'TorrentReport',
     name: 'Torrent Report',
     description:
-      'A platform that actively scrapes and aggregates information on popular files from various bit torrent websites. The server automatically scrapes torrent sharing websites and collects download statistics on files are tracked over time.',
+      'A platform that actively scrapes and aggregates information on popular files from various bit torrent websites and trackers. The server autonomously scrapes torrent sources and collects a time series download statistics on files.',
     readme:
       'The website is a React application built with Redux and I am currently implementing GraphQL.',
     images: [
@@ -134,10 +134,12 @@ const data = [
     ]
   },
   {
-    urlname: 'scrapeTorrentStats',
-    name: 'scrapeTorrentStats',
+    urlname: 'scrape-torrent-stats',
+    name: 'scrape-torrent-stats',
     description:
-      'Scrape information from the bittorrent trackers and the distributed hash table. Given a bittorrent magnet URI, scrapeTorrentStats can check both tracker and the DHT for downloads and peers. This project utilizes two great tools from the wizards that brought us WebTorrent. We use their DHT client bittorrent-dht, and their tracker client bittorrent-tracker. This project also uses native promises.',
+      'Scrape information from the bittorrent trackers and the distributed hash table. Given a bittorrent magnet URI, scrapeTorrentStats can check both tracker and the DHT for downloads and peers. ',
+    readme:
+      'This project utilizes two great tools from the wizards that brought us WebTorrent. We use their DHT client bittorrent-dht, and their tracker client bittorrent-tracker. This project also uses native promises.',
     images: [
       {
         title: 'Yarn Run Example',
@@ -169,7 +171,9 @@ const data = [
     urlname: 'lazySuite',
     name: 'lazyBuilder, lazySQL, and lazyExpress',
     description:
-      'An unopinionated Sequelize model and association builder. You give us just the Sequelize objects/tables you want, we give you production ready JavaScript files implementing your sequlize models to use in your projects. This package can be used either as a dependency in another project, command line tool, or with lazyBuilder (our GUI).',
+      'An unopinionated Sequelize model and association builder. You give us just the Sequelize objects/tables you want, we give you production ready JavaScript files implementing your sequlize models to use in your projects.',
+    readme:
+      'This package can be used either as a dependency in another project, command line tool, or with lazyBuilder (our GUI).',
     images: [
       {
         title: 'Home',

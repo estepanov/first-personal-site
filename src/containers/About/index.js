@@ -3,7 +3,7 @@ import './About.css'
 export default class About extends Component {
   render() {
     return (
-      <div className="About content-fixed">
+      <div className="About content-fixed fade-in">
         <img className="about-image" src="./me.png" alt="me :)" />
 
         <h3>Hello!</h3>

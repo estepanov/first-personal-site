@@ -56,10 +56,10 @@ export default class Contact extends Component {
 
     switch (fieldName) {
       case 'name': {
-        if (fieldObject.value.length < 5)
+        if (fieldObject.value.length < 3)
           return {
             ...fieldObject,
-            error: 'Name needs to be atleast 5 letters long'
+            error: 'Your name must to be at least 3 letters long.'
           }
         return clearErrorFromObj(fieldObject)
       }
@@ -68,7 +68,7 @@ export default class Contact extends Component {
         if (!emailTest)
           return {
             ...fieldObject,
-            error: 'Not a valid email'
+            error: 'This is not a valid email.'
           }
         return clearErrorFromObj(fieldObject)
       }
@@ -76,7 +76,7 @@ export default class Contact extends Component {
         if (fieldObject.value.length < 20)
           return {
             ...fieldObject,
-            error: 'Message needs to be atleast 20 letters long'
+            error: 'This needs to be at least 20 letters long.'
           }
         return clearErrorFromObj(fieldObject)
       }
@@ -118,7 +118,7 @@ export default class Contact extends Component {
       console.log('error')
       console.log(error)
       return (
-        <div className="center">
+        <div className="center fade-in">
           <div>
             <h2>Whoops!</h2>
             <p>
@@ -130,7 +130,7 @@ export default class Contact extends Component {
     }
     if (sent)
       return (
-        <div className="center">
+        <div className="center fade-in">
           <div>
             <h2>Success!</h2>
             <p>
@@ -142,7 +142,7 @@ export default class Contact extends Component {
       )
     if (sending)
       return (
-        <div className="center">
+        <div className="center fade-in">
           <div>
             <h2>Sending</h2>
             <p>Your message is now being emailed to me.</p>
@@ -151,7 +151,7 @@ export default class Contact extends Component {
       )
     return (
       <div className="center">
-        <form className="contact-form" onSubmit={this.handleSubmit}>
+        <form className="contact-form fade-in" onSubmit={this.handleSubmit}>
           <label id={this.state.name.error && 'contact-form-error'}>
             name<input
               value={this.state.name.value}

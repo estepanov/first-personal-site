@@ -16,7 +16,7 @@ export default class ProjectFilter extends Component {
     const { tag, taggedProjects, projectsData } = this.props
     if (tag) {
       return (
-        <div className="tag-current" key={tag}>
+        <div className="tag-current fade-in" key={tag}>
           <p>
             Currently showing{' '}
             {taggedProjects.length === 1

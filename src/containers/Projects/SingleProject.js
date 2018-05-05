@@ -11,7 +11,7 @@ class SingleProject extends Component {
     const singleProject = projectsData.find(
       project => project.urlname.toLowerCase() === searchName
     )
-    if (!singleProject) return <div> Project Not Found</div>
+    if (!singleProject) return <h1> Project Not Found</h1>
     return (
       <div className="projects content-fixed">
         <FullProjectView project={singleProject} />
