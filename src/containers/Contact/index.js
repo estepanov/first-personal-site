@@ -39,10 +39,14 @@ export default class Contact extends Component {
     this.setState({ ...this.state, sending: true })
     axios
       .post(
-        'https://en7mzqeu1j.execute-api.us-east-1.amazonaws.com/deploy/sendMessage',
+        'https://en7mzqeu1j.execute-api.us-east-1.amazonaws.com/deploy/sendmessage',
         postingObj
       )
-      .then(res => res.data)
+      .then(res => {
+        console.log('res.data --> -->')
+        console.log(res.data)
+        return res.data
+      })
       .then(res => {
         console.log(' ---- res ----', res)
         this.setState({ ...this.state, sent: true })
@@ -119,7 +123,7 @@ export default class Contact extends Component {
       console.log(error)
       return (
         <div className="center fade-in">
-          <div>
+          <div className="content-fixed">
             <h2>Whoops!</h2>
             <p>
               Sorry, we couldn't mail your message. This error has been logged.
@@ -131,11 +135,12 @@ export default class Contact extends Component {
     if (sent)
       return (
         <div className="center fade-in">
-          <div>
+          <div className="content-fixed">
             <h2>Success!</h2>
             <p>
-              But this form was not sent yet! Because site is still a work in a
-              progress.
+              Thank you <b>{this.state.name.value}</b>. You have successfully
+              emailed me. Unless I am very busy, I will responde to your email{' '}
+              <b>{this.state.email.value}</b> within 24-48 hours.
             </p>
           </div>
         </div>
@@ -143,7 +148,7 @@ export default class Contact extends Component {
     if (sending)
       return (
         <div className="center fade-in">
-          <div>
+          <div className="content-fixed">
             <h2>Sending</h2>
             <p>Your message is now being emailed to me.</p>
           </div>

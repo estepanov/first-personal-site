@@ -6,8 +6,20 @@ import BreakDownTags from './BreakDownTags'
 
 class ListItemProject extends Component {
   render() {
-    const { urlname, name, description, images, breakdown } = this.props.project
-    const imagesToDisplay = images.slice(0, 3) // only show first 3 images
+    const {
+      urlname,
+      name,
+      description,
+      images,
+      breakdown,
+      showcaseImageIds
+    } = this.props.project
+    const imagesToDisplay = showcaseImageIds.map(id => {
+      for (let x = 0; x < images.length; x++) {
+        if (images[x].id === id) return images[x]
+      }
+      return {}
+    })
     if (!name) return <div />
     return (
       <Link className="list-item" to={`/projects/${urlname}`}>
@@ -24,7 +36,12 @@ class ListItemProject extends Component {
           {imagesToDisplay &&
             imagesToDisplay.length &&
             imagesToDisplay.map(img => (
-              <Image img={img} className="list-item-mini-img" />
+              <Image
+                key={`${name}-${img.title}`}
+                img={img}
+                preview={true}
+                className="list-item-mini-img"
+              />
             ))}
         </div>
       </Link>

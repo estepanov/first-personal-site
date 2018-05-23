@@ -19,6 +19,7 @@ export default class ImageCollection extends Component {
 
   render() {
     const containerClassName = this.props.className
+    const { preview } = this.props
     const { images, showZoom, selectedImage } = this.state
     if (images && images.length) {
       return (
@@ -33,6 +34,7 @@ export default class ImageCollection extends Component {
             )}
           {images.map(img => (
             <Image
+              preview={preview}
               key={`${img.url}-${img.title}`}
               onClick={() => this.toggle(img)}
               className={this.props.imageHolderClassName}
