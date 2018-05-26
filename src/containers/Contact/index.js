@@ -139,8 +139,12 @@ export default class Contact extends Component {
             <h2>Success!</h2>
             <p>
               Thank you <b>{this.state.name.value}</b>. You have successfully
-              emailed me. Unless I am very busy, I will responde to your email{' '}
-              <b>{this.state.email.value}</b> within 24-48 hours.
+              emailed me.
+            </p>
+            <p>
+              Unless I am binge playing video games, coding some random NPM
+              module, or skiing I will responde to your email
+              <b>{' ' + this.state.email.value}</b> within 2 days.
             </p>
           </div>
         </div>
