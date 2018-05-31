@@ -5,7 +5,7 @@ const data = [
     description:
       'A platform that actively scrapes and aggregates information on popular files from various bit torrent websites and trackers. The server autonomously scrapes torrent sources and collects a time series download statistics on files.',
     readme:
-      'The website is a React application built with Redux and I am currently implementing GraphQL.',
+      'The platform visits torrent sites to gather download statistics and collects time series download statistics of popular files. This project is setup with continuous integration and deployment, and is hosted on various cloud providers like Digital Ocean, Heroku, and Amazon Web Services. \n \n ### Back end \n \n The backend has a fully automated modularized scrape engine for scraping torrent sites utilizing Puppeteer to mimic an end user. The backend is a production ready Express server application with proxy setup, REST API, API rate limiting, compression, and secure headers. \n \n ### Front end \n \n The front end is a React application with Redux for the data store and web workers for searching locally stored data. The Front end style is built using SASS without any CSS framework, and optimized for mobile using flexbox. Set up with continous integration and delivery. \n \n ### In Development\n * I am currently researching implementing GraphQL via Apollo client or Relay Modern. \n * Redis are currently being implemented to cache complex DB queries. \n * Actively adding new features and improving existing features of both the front and back ends. ',
     showcaseImageIds: [1, 4, 5],
     images: [
       {
@@ -95,7 +95,6 @@ const data = [
     readme:
       '### How to use it. \n \n Users start out by logging in with GitHub, which allows Boilerplate Pro access to all the necessary data to make new repos and clone data for a user. Upon login the user will see a list of boilerplates that are available for selection and sorting, but more importantly they can search for a specific word that exists in the README, title and package.JSON. \n \n This allows users complete control over their search. Users can then view a rendered version of the selected boilerplates README and, if they decide to build it, choose a name and start the Hyperclone™ process. The user will then see a link to the newly created GitHub repo on their account and options for Travis CI as well as Heroku for deployment. \n \n ### How it works. \n \n Boilerplate Pro uses Googles Firestore for realtime, NoSQL, database for data which posed interesting challenges for our team. Because we had no traditional backend we could not make API requests and we initially attempted to use cloud functions to circumvent this issue. However, timeout constraints forced us to forgo this and build out a backend in addtion to the Firestore. The backend eventually helped us utilize Travis for continuous integration on every project. \n \n The process of scraping the necessary boilerplates is very resource and time intensive, so much so that we had to build a rate limited and time based method to work in line with GitHubs API constraints. This process scrapes the boilerplate itself as well as the README and the dependencies which are necessary to make searching work. \n \n We also had unique challenges in determing the best way to streamline the user experience in terms of forking or cloning. The Hyperclone™ process condenses initial cloning, remote adding, pulling, adding, commiting and pushing into one button for the user.  \n \n Heroku was the most difficult challenge of the project and is still not fully working in the current build. Not all boilerplates are immediately deployable and the Heroku button will not function for every single boilerplate. Every boilerplate is different and may be missing one of any necessary files to enable working deployment.',
     showcaseImageIds: [1, 3, 4],
-
     images: [
       {
         id: 1,
@@ -172,7 +171,7 @@ const data = [
     description:
       'Scrape information from the bittorrent trackers and the distributed hash table. Given a bittorrent magnet URI, scrapeTorrentStats can check both tracker and the DHT for downloads and peers. ',
     readme:
-      'This project utilizes two great tools from the wizards that brought us WebTorrent. We use their DHT client bittorrent-dht, and their tracker client bittorrent-tracker. This project also uses native promises.',
+      'This project utilizes two great tools from the wizards that brought us WebTorrent. We use their DHT client bittorrent-dht, and their tracker client bittorrent-tracker. This project also uses native promises. \n \n When providing a magnet URI: \n * From bit torrent trackers: this utility will return download statistics reported and a list of connected peers. \n * If selected this utility will listen for peers from distributed hash table and report any peers that were discovered.  ',
     showcaseImageIds: [1, 2],
     images: [
       {
