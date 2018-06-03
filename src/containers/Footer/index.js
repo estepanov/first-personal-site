@@ -10,6 +10,8 @@ export default class Footer extends Component {
         <div className="footer-links">
           <a href="https://github.com/estepanov">GitHub</a>
           <a href="https://www.linkedin.com/in/evansstepanov/">LinkedIn</a>
+          <a href="https://angel.co/evans-alexis-stepanov">AngelList</a>
+          <a href="https://twitter.com/evans_stepanov">Twitter</a>
         </div>
         <p>&copy; {year}</p>
       </div>

@@ -43,12 +43,9 @@ export default class Contact extends Component {
         postingObj
       )
       .then(res => {
-        console.log('res.data --> -->')
-        console.log(res.data)
         return res.data
       })
       .then(res => {
-        console.log(' ---- res ----', res)
         this.setState({ ...this.state, sent: true })
       })
       .catch(err => this.setState({ ...this.state, error: err }))
@@ -126,7 +123,8 @@ export default class Contact extends Component {
           <div className="content-fixed">
             <h2>Whoops!</h2>
             <p>
-              Sorry, we couldn't mail your message. This error has been logged.
+              Sorry, we couldn't mail your message. This is not because of
+              anything you did. Please try again in 24 hours.
             </p>
           </div>
         </div>
@@ -142,9 +140,9 @@ export default class Contact extends Component {
               emailed me.
             </p>
             <p>
-              Unless I am binge playing video games, coding some random NPM
-              module, or skiing I will responde to your email
-              <b>{' ' + this.state.email.value}</b> within 2 days.
+              Unless I am binge playing video games, coding, jamming to music,
+              or skiing I will respond to your email{' '}
+              <b>({this.state.email.value})</b> within 24 hours.
             </p>
           </div>
         </div>
@@ -154,7 +152,7 @@ export default class Contact extends Component {
         <div className="center fade-in">
           <div className="content-fixed">
             <h2>Sending</h2>
-            <p>Your message is now being emailed to me.</p>
+            <p>The cloud is email your message to me...</p>
           </div>
         </div>
       )
