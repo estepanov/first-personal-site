@@ -5,7 +5,7 @@ const data = [
     description:
       'A platform that actively scrapes and aggregates information on popular files from various bit torrent websites and trackers. The server autonomously scrapes torrent sources and collects a time series download statistics on files.',
     readme:
-      'The platform visits torrent sites to gather download statistics and collects time series download statistics of popular files. This project is setup with continuous integration and deployment, and is hosted on various cloud providers like Digital Ocean, Heroku, and Amazon Web Services. \n \n ### Back end \n \n The backend has a fully automated modularized scrape engine for scraping torrent sites utilizing Puppeteer to mimic an end user. The backend is a production ready Express server application with proxy setup, REST API, API rate limiting, compression, and secure headers. \n \n ### Front end \n \n The front end is a React application with Redux for the data store and web workers for searching locally stored data. The Front end style is built using SASS without any CSS framework, and optimized for mobile using flexbox. Set up with continous integration and delivery. \n \n ### In Development\n * I am currently researching implementing GraphQL via Apollo client or Relay Modern. \n * Redis are currently being implemented to cache complex DB queries. \n * Actively adding new features and improving existing features of both the front and back ends. ',
+      'The platform visits torrent sites to gather download statistics and collects time series download statistics of popular files. This project is setup with continuous integration and deployment, and is hosted on various cloud providers like Digital Ocean, Heroku, and Amazon Web Services. \n \n ### Back end \n \n The backend has a fully automated modularized scrape engine for scraping torrent sites utilizing Puppeteer to mimic an end user. The backend is a production ready Express server application with proxy setup, REST API, API rate limiting, compression, Redis cache of complex queries, and secure headers. \n \n ### Front end \n \n The front end is a React application with Redux for the data store and web workers for searching locally stored data. The Front end style is built using SASS without any CSS framework, and optimized for mobile using flexbox. Set up with continous integration and delivery. \n \n ### In Development\n * I am currently researching implementing GraphQL via Apollo client or Relay Modern. \n * Redis are currently being implemented to cache complex DB queries. \n * Actively adding new features and improving existing features of both the front and back ends. ',
     showcaseImageIds: [1, 4, 5],
     images: [
       {
@@ -60,7 +60,8 @@ const data = [
           'Redux',
           'Post CSS',
           'SASS',
-          'Webpack'
+          'Webpack',
+          'CI/CD'
         ]
       },
       {
@@ -71,8 +72,10 @@ const data = [
           'Mocha',
           'Postgres',
           'Sequelize',
+          'Redis',
           'Puppeteer',
-          'GraphQL'
+          'GraphQL',
+          'CI/CD'
         ]
       }
     ],
@@ -142,12 +145,13 @@ const data = [
           'Redux',
           'Bulma CSS',
           'Jest',
-          'Webpack'
+          'Webpack',
+          'CI/CD'
         ]
       },
       {
         title: 'Backend',
-        value: ['Node', 'Express', 'Mocha', 'Postgres', 'Sequelize']
+        value: ['Node', 'Express', 'Mocha', 'Postgres', 'Sequelize', 'CI/CD']
       }
     ],
     links: [
