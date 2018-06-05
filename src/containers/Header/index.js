@@ -25,7 +25,10 @@ export default class Header extends Component {
           <NavLink activeClassName="active-nav" to="/projects">
             Projects
           </NavLink>
-          <a target="_blank" href="/Evans_Alexis_Stepanov_Resume.pdf">
+          <a
+            target="_blank"
+            href="https://github.com/estepanov/estepanov.io/raw/master/public/Evans_Alexis_Stepanov_Resume.pdf"
+          >
             Resume
           </a>
           <NavLink activeClassName="active-nav" to="/contact">
