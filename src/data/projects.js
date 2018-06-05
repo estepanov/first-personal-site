@@ -54,15 +54,7 @@ const data = [
     breakdown: [
       {
         title: 'Frontend',
-        value: [
-          'React',
-          'React-router-dom',
-          'Redux',
-          'Post CSS',
-          'SASS',
-          'Webpack',
-          'CI/CD'
-        ]
+        value: ['React', 'Redux', 'Post CSS', 'SASS', 'Webpack']
       },
       {
         title: 'Backend',
@@ -74,8 +66,15 @@ const data = [
           'Sequelize',
           'Redis',
           'Puppeteer',
-          'GraphQL',
-          'CI/CD'
+          'GraphQL'
+        ]
+      },
+      {
+        title: 'Deployment',
+        value: [
+          'Continuous Integration',
+          'Continuous Delivery',
+          'Amazon Web Services'
         ]
       }
     ],
@@ -139,19 +138,22 @@ const data = [
     breakdown: [
       {
         title: 'Frontend',
-        value: [
-          'React',
-          'React-router-dom',
-          'Redux',
-          'Bulma CSS',
-          'Jest',
-          'Webpack',
-          'CI/CD'
-        ]
+        value: ['React', 'Redux', 'Bulma CSS', 'Jest', 'Webpack']
       },
       {
         title: 'Backend',
-        value: ['Node', 'Express', 'Mocha', 'Postgres', 'Sequelize', 'CI/CD']
+        value: [
+          'Node',
+          'Express',
+          'Mocha',
+          'Postgres',
+          'Sequelize',
+          'Firestore'
+        ]
+      },
+      {
+        title: 'Deployment',
+        value: ['Continuous Integration', 'Continuous Delivery', 'Heroku']
       }
     ],
     links: [
@@ -257,7 +259,7 @@ const data = [
     breakdown: [
       {
         title: 'Frontend',
-        value: ['Electron', 'React', 'React-router-dom', 'Redux', 'Webpack']
+        value: ['Electron', 'React', 'Redux', 'Webpack']
       }
     ],
     links: [

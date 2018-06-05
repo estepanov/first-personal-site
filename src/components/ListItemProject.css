@@ -47,7 +47,8 @@
   border: solid 3px #ffffff;
   margin: 10px 10px 0 0;
   height: 140px;
-  background-color: rgba(206, 206, 206, 0.1);
+  min-width: 140px;
+  background-color: rgba(143, 143, 143, 0.384);
 }
 
 .slow-fade-in {

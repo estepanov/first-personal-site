@@ -31,15 +31,25 @@ export default class ProjectFilter extends Component {
         </div>
       )
     } else {
-      const allTags = projectsData.reduce((prev, curr) => {
-        const currentTags = []
-        curr.breakdown.forEach(group => {
-          group.value.forEach(tag => {
-            if (!prev.includes(tag)) currentTags.push(tag)
+      const counterObj = {}
+      const allTags = projectsData
+        .reduce((prev, curr) => {
+          const currentTags = []
+          curr.breakdown.forEach(group => {
+            group.value.forEach(tag => {
+              if (!prev.includes(tag)) {
+                currentTags.push(tag)
+                counterObj[tag] = 1
+              } else {
+                counterObj[tag] += 1
+              }
+            })
           })
+          return prev.concat(currentTags)
+        }, [])
+        .sort((a, b) => {
+          return counterObj[b] - counterObj[a]
         })
-        return prev.concat(currentTags)
-      }, [])
       return (
         <div className="proj-filter-container">
           {/*<div className="proj-filter-toggle" onClick={this.toggleVisability}>
