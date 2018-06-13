@@ -27,7 +27,8 @@ export default class Header extends Component {
           </NavLink>
           <a
             target="_blank"
-            href="https://github.com/estepanov/estepanov.io/raw/master/public/Evans_Alexis_Stepanov_Resume.pdf"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/185O88kwJULDimHpPmTQAiy2zyiNUxRFt/view?usp=sharing"
           >
             Resume
           </a>
