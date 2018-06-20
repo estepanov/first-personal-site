@@ -28,7 +28,7 @@ export default class Header extends Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/185O88kwJULDimHpPmTQAiy2zyiNUxRFt/view?usp=sharing"
+            href="https://app.box.com/v/estepanov-resume"
           >
             Resume
           </a>
