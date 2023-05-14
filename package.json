@@ -2,7 +2,7 @@
   "name": "estepanov.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://estepanov.io",
+  "homepage": "https://www.first-personal-site.builtbyevans.com",
   "dependencies": {
     "axios": "^0.18.0",
     "d3-ease": "^1.0.3",

@@ -64,10 +64,7 @@ body {
 }
 
 .top-line-bar {
-  display: block;
-  position: absolute;
   height: 5px;
   background-color: #00b4ff;
-  top: 0;
   width: 100%;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import './Contact.css'
 
 export default class Contact extends Component {
@@ -37,15 +37,14 @@ export default class Contact extends Component {
   }
   sendMessage = postingObj => {
     this.setState({ ...this.state, sending: true })
-    axios
-      .post(
-        'https://en7mzqeu1j.execute-api.us-east-1.amazonaws.com/deploy/sendmessage',
-        postingObj
-      )
-      .then(res => {
-        return res.data
-      })
-      .then(res => {
+    // axios
+    //   .post(
+    //     'https://en7mzqeu1j.execute-api.us-east-1.amazonaws.com/deploy/sendmessage',
+    //     postingObj
+    //   )
+    alert("This form is only up for demo reasons. To contact me please visit my current site.")
+    Promise.resolve()
+      .then(() => {
         this.setState({ ...this.state, sent: true })
       })
       .catch(err => this.setState({ ...this.state, error: err }))
