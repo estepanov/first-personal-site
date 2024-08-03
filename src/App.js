@@ -28,7 +28,7 @@ class App extends Component {
             </div>
             <div>
             <div><a 
-            href='https://builtbyevans.com/'
+            href='https://evansstepanov.com/'
             style={{
             marginTop: "10px",
             display: "inline-flex",
